@@ -41,6 +41,7 @@ namespace slnExamen3
                 Surname = txtSurname.Text.Trim()
             });
             updateList();
+            cleanBoxes();
         }
 
         private void updateList()
