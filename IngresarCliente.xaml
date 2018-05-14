@@ -10,7 +10,16 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <TextBox x:Name="txtName" Header="Nombre" HorizontalAlignment="Left" Margin="42,39,0,0" Text="" VerticalAlignment="Top" Width="293"/>
         <TextBox x:Name="txtSurname" Header="Apellido" HorizontalAlignment="Left" Margin="42,123,0,0" Text="" VerticalAlignment="Top" Width="293"/>
-        <ListView x:Name="lstClients" HorizontalAlignment="Left" Height="100" Margin="42,221,0,0" VerticalAlignment="Top" Width="553"/>
+        <ListView x:Name="lstClients" HorizontalAlignment="Left" Height="100" Margin="42,221,0,0" VerticalAlignment="Top" Width="553">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}" Margin="10 10 10 10"/>
+                        <TextBlock Text="{Binding Surname}" Margin="10 10 10 10"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         <Button x:Name="btnAdd" Content="Agregar" HorizontalAlignment="Left" Margin="399,67,0,0" VerticalAlignment="Top" Click="btnAdd_Click"/>
     </Grid>
 </Page>
