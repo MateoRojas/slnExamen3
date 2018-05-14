@@ -36,11 +36,11 @@ namespace slnExamen3
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            updateList();
             this.database.Insert(new Client(){
                 Name = txtName.Text.Trim(),
                 Surname = txtSurname.Text.Trim()
             });
+            updateList();
         }
 
         private void updateList()
